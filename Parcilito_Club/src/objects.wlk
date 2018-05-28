@@ -1,0 +1,11 @@
+
+class Club {
+
+
+
+}
+
+class Socio{
+	
+	
+}
