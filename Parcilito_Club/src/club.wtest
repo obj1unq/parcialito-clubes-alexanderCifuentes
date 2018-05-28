@@ -4,11 +4,38 @@ describe "test de clubs" {
 	
 	var nogal = new ClubTradicional(gastosMensuales = 5000)
 	var juan = new Socio()
+	var baile = new ActividadSocial(socioOrganizador= juan, valorEvaluacion = 50)
+	var ruben = new Socio()
+	var pardo = new ClubProfecional(gastosMensuales = 8000)
+	var pitufos = new Equipo()
+	var manuel = new Jugador()
 	
+	fixture{
+		nogal.agregarActividad(baile)
+		pitufos.agregarIntegrante(manuel)
+		manuel.valorPase(1500)
+		manuel.cantPartidos(53)
+		pardo.agregarActividad(pitufos)
+	}
 	
 	test "1 agregar a juan al club nogal" {
 		nogal.agregarSocio(juan)
 		
 		assert.equals(#{juan},nogal.socios())
 		}
+		
+	test "2 manuel es capitan de los pitufos" {
+		pitufos.capitan(manuel)
+		
+		assert.equals(manuel,pitufos.capitan())
+		}
+		
+	test "3 manuel es estrella del equipo" {
+		
+		
+		assert.that(manuel.esEstrella())
+		}
+		
+	
+		
 }

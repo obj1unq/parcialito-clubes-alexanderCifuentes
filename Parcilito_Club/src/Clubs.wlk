@@ -245,9 +245,7 @@ class Equipo inherits ActividadSocial{
 		return participantes.all({jugador=> jugador.cantPartidos()>=10})
 	}
 	
-	method transferir(socio){
-		
-	}
+	
 	
 
 }
