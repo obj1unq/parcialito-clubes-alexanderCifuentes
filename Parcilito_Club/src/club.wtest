@@ -1,0 +1,14 @@
+import Clubs.*
+describe "test de clubs" {
+	
+	
+	var nogal = new ClubTradicional(gastosMensuales = 5000)
+	var juan = new Socio()
+	
+	
+	test "1 agregar a juan al club nogal" {
+		nogal.agregarSocio(juan)
+		
+		assert.equals(#{juan},nogal.socios())
+		}
+}
